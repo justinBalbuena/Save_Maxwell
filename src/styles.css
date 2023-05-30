@@ -1,0 +1,209 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/*Keyboard and Button Css*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.keybord {
+  box-shadow: -3px -3px 5px rgb(63, 63, 63), 3px 3px 5px black;
+  width: 680px;
+  margin: 20px auto 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: rgb(69, 62, 62);
+}
+.row {
+  margin: 5px;
+  user-select: none;
+}
+button {
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  margin: 0 4px;
+  border: none;
+  background-color: rgb(57, 47, 47);
+  color: white;
+  box-shadow: -2px -2px 4px rgb(63, 63, 63), 2px 2px 4px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.backSpace button {
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+  margin: 0 4px;
+  border: none;
+  background-color: rgb(57, 47, 47);
+  color: white;
+  box-shadow: -2px -2px 4px rgb(63, 63, 63), 2px 2px 4px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.row4,
+.backspace,
+.space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keyboard .backspace,
+.space {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  /* user-select: none; */
+}
+.backspace,
+.space {
+  border-radius: 5px;
+  box-shadow: -2px -2px 4px rgb(63, 63, 63), 2px 2px 4px black;
+}
+.keybord .space {
+  width: 300px;
+  height: 50px;
+}
+.keybord .backspace {
+  width: 100px;
+  height: 50px;
+  margin-left: 15px;
+}
+button:hover {
+  width: 70px;
+  height: 70px;
+}
+button:active {
+  background-color: rgb(30, 27, 27);
+  box-shadow: inset -2px -2px 4px rgb(63, 63, 63);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+  gap: 10px;
+}
+*/
+
+/* APP.JS ---------------------- */
+
+.wordDisplaywordDisplay {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  flex-flow: row-reverse;
+}
+/* ------- */
+#boardRow0,
+#boardRow1,
+#boardRow2,
+#boardRow3,
+#boardRow4,
+#boardRow5,
+#boardRow6 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 75px);
+  grid-template-rows: repeat(1, 75px);
+  gap: 50px;
+}
+
+.tile {
+  justify-content: center;
+  background-color: lightgray;
+  border: 2px gray dashed;
+}
+
+.letter.correct {
+  background-color: green;
+}
+
+.letter.wrongP {
+  background-color: yellow;
+}
+
+.letter {
+  background-color: grey;
+}
+
+/* .letter1 {
+  background-color: gold;
+} */
+
+.LavaBox {
+  background-color: red;
+  /* display: block; */
+  background: url("https://i.gifer.com/13wM.gif") repeat;
+  /* background-size: 250px 250px; */
+  /* background-image: url("https://png.pngtree.com/png-vector/20230305/ourmid/pngtree-prison-bars-vector-png-image_6633246.png"); */
+  margin: auto;
+  margin-bottom: 25px;
+  /* width: %; */
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  align-items: center;
+  padding: 10px;
+  display: inline-block;
+  float: left;
+  margin-top: 0%;
+  height: 50%;
+}
+
+.headTitle {
+  font-size: 40px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 999;
+}
+
+progress {
+  width: 75%;
+}
+
+/* body {
+  background: url('') repeat;
+} */
+
+.gameContainer {
+  display: flex;
+}
+
+.leftContain {
+  margin: auto;
+  margin-bottom: 25px;
+  /* width: 90%; */
+  text-align: center;
+  /* color: white; */
+  /* font-size: 50px; */
+  align-items: center;
+  padding: 10px;
+  /* float:left; */
+  margin-top: 0%;
+  height: 50%;
+  display: block;
+}
+
+.maxwellHead {
+  width: 175px;
+  height: 105px;
+  margin: 10px;
+}
+
+.gameHeader {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.gameTitles {
+  display: block;
+}
+
+#saveMax {
+  opacity: 1;
+}
